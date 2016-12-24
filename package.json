@@ -1,0 +1,14 @@
+{
+  "name": "timestamp",
+  "version": "1.0.0",
+  "description": "Timestamp service to return the unix timestamp as well as the current date in a human readable format. It takes either of these two params as input, and returns both. If the input does not match either format, then the service will return null.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "srini5",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
