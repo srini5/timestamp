@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title> Timestamp microservice</title>
+    </head>
+    <body>
+    <h1>Welcome to my 'timestamp microservice' page</h1>
+
+            
+<p>This is a microservice which returns the date in natural language form as well as the corresponding unix timestamp form.</p>
+
+<h3>
+Example usage:</h3>
+
+<p>
+<ol>
+    <li>
+        Pass in a unix timestamp, and get back the date in both formats:
+        <pre>
+        e.g:
+        https://git-fcc-srini5.c9users.io/1450539600000
+        {"unix":1450539600000,"natural":"December 19, 2015"}
+        </pre>
+    </li>
+    <li>
+        Pass in a human readable date, and get back the date in both formats
+        (Note that any spaces will get replaced by %20 by the browser automatically):
+        If date is given as numbers separated by dashes, it will be interpreted as MM-DD-YYYY or YYYY-MM-DD by default
+        If month name is spelled out, either a three character month name or full name is acceptable.
+        <pre>
+        e.g:
+        https://git-fcc-srini5.c9users.io/Dec%201,%201987
+        {"unix":565315200000,"natural":"December 1, 1987"}
+        
+        https://git-fcc-srini5.c9users.io/December%201,%201987
+        {"unix":565315200000,"natural":"December 1, 1987"}
+        
+        https://git-fcc-srini5.c9users.io/12-31-1991
+        {"unix":694137600000,"natural":"December 31, 1991"}
+        </pre>
+    </li>
+    <li>
+        Any invalid input (non-date), or an unrecognized date format will cause null to be returned.
+        <pre>
+        e.g:
+        https://git-fcc-srini5.c9users.io/Once%20upon%20a%20time
+        {"unix":null,"natural":null}
+        </pre>
+    </li>
+</ol>
+</p>
+
+<h3>
+Following user stories are covered in this microservice: 
+</h3>
+<p>
+<ul>
+    <li>
+User Story 1: I can pass a string as a parameter, and it will check to see whether that string contains either a unix timestamp or a natural language date (example: January 1, 2016).        
+    </li>
+    <li>
+User Story 2: If it does, it returns both the Unix timestamp and the natural language form of that date.        
+    </li>
+    <li>
+User Story 3: If it does not contain a date or Unix timestamp, it returns null for those properties.        
+    </li>
+</ul>
+</p>
+    </body>
+    
+</html>

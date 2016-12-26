@@ -47,4 +47,6 @@ express.get('/time/:timestamp', function(req,res){
     res.write(JSON.stringify(response));
     res.end();
 
+}).get('/', function(req, res){
+    res.sendFile(__dirname + '/index.html');
 }).listen(process.env.PORT || 8080);
