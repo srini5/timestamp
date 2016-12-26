@@ -17,7 +17,7 @@ Example usage:</h3>
         Pass in a unix timestamp, and get back the date in both formats:
         <pre>
         e.g:
-        https://mysterious-fortress-88705.herokuapp.com/time/1450539600000
+        https://mysterious-fortress-88705.herokuapp.com/1450539600000
         {"unix":1450539600000,"natural":"December 19, 2015"}
         </pre>
     </li>
@@ -28,13 +28,13 @@ Example usage:</h3>
         If month name is spelled out, either a three character month name or full name is acceptable.
         <pre>
         e.g:
-        https://mysterious-fortress-88705.herokuapp.com/time/1982%20November%205
+        https://mysterious-fortress-88705.herokuapp.com/1982%20November%205
         {"unix":405302400000,"natural":"November 5, 1982"}
         
-        https://mysterious-fortress-88705.herokuapp.com/time/Dec%2020,2089
+        https://mysterious-fortress-88705.herokuapp.com/Dec%2020,2089
         {"unix":3785875200000,"natural":"December 20, 2089"}
         
-        https://mysterious-fortress-88705.herokuapp.com/time/12-31-1991
+        https://mysterious-fortress-88705.herokuapp.com/12-31-1991
         {"unix":694137600000,"natural":"December 31, 1991"}
         </pre>
     </li>
@@ -42,7 +42,7 @@ Example usage:</h3>
         Any invalid input (non-date), or an unrecognized date format will cause null to be returned.
         <pre>
         e.g:
-        https://mysterious-fortress-88705.herokuapp.com/time/Once%20upon%20a%20time
+        https://mysterious-fortress-88705.herokuapp.com/Once%20upon%20a%20time
         {"unix":null,"natural":null}
         </pre>
     </li>

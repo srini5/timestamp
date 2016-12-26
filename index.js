@@ -1,6 +1,6 @@
 var express = require("express")();
 
-express.get('/time/:timestamp', function(req,res){
+express.get('/:timestamp', function(req,res){
     console.log("received: "+req.params.timestamp);
     var inputDate = req.params.timestamp;
     var dateVal = new Date((isNaN(inputDate))?inputDate:Number(inputDate));
