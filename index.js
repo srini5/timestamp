@@ -1,6 +1,6 @@
 var express = require("express")();
 
-express.get('/:timestamp', function(req,res){
+express.get('/time/:timestamp', function(req,res){
     console.log("received: "+req.params.timestamp);
     var inputDate = req.params.timestamp;
     var dateVal = new Date((isNaN(inputDate))?inputDate:Number(inputDate));
@@ -47,4 +47,4 @@ express.get('/:timestamp', function(req,res){
     res.write(JSON.stringify(response));
     res.end();
 
-}).listen(8080);
+}).listen(process.env.PORT || 8080);

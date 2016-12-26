@@ -4,7 +4,8 @@
   "description": "Timestamp service to return the unix timestamp as well as the current date in a human readable format. It takes either of these two params as input, and returns both. If the input does not match either format, then the service will return null.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "author": "srini5",
   "license": "ISC",
